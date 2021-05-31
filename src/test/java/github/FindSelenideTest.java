@@ -10,6 +10,7 @@ import java.util.Map;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.visible;
 
 public class FindSelenideTest {
 
@@ -17,25 +18,18 @@ public class FindSelenideTest {
     @Test
     void shouldFindSelenideOnGitHub() {
 
-
-
-
         //открыть страницу gitHub
-        open("https://github.com");
-
-        //ввести в поле поиска selenide и нажать enter
-        $("[name=q]").setValue("Selenide").pressEnter();
+        open("https://github.com/selenide/selenide");
 
         //кликнуть на раздел wiki проекта
-        $$(".menu-item").get(8).click();
+        $(byText("Wiki")).click();
 
         //проверить, что на странице есть SoftAssertions и перейти на неё
-        $(byText("SoftAssertions")).shouldBe(Condition.visible);
-        $("[title='SoftAssertions']").click();
+
+        $(byText("Soft assertions")).shouldBe(visible).click();
 
         //проверить текст
-        $(byText("Using JUnit5 extend test class:")).shouldBe(Condition.visible);
-
+        $(byText("Using JUnit5 extend test class:")).shouldBe(visible);
 
     }
     }
