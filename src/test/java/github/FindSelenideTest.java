@@ -1,22 +1,19 @@
 package github;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selectors;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.ex.DialogTextMismatch;
 import org.junit.jupiter.api.Test;
 
-import java.util.Map;
-
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class FindSelenideTest {
 
-
     @Test
     void shouldFindSelenideOnGitHub() {
+
+
+
 
         //открыть страницу gitHub
         open("https://github.com/selenide/selenide");
@@ -30,6 +27,7 @@ public class FindSelenideTest {
 
         //проверить текст
         $(byText("Using JUnit5 extend test class:")).shouldBe(visible);
+
 
     }
     }
