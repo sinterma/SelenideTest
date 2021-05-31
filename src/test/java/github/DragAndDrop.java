@@ -17,6 +17,6 @@ public class DragAndDrop {
         Selenide.$("[id=column-a]").dragAndDropTo("[id=column-b]");
         Selenide.$("[id=column-a]").shouldHave(Condition.text("B"));
 
-        Selenide.sleep(10000);
+
     }
 }
