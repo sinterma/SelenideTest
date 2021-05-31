@@ -19,11 +19,10 @@ public class FindSelenideTest {
         $(byText("Wiki")).click();
 
         //проверить, что на странице есть SoftAssertions и перейти на неё
-
         $(byText("Soft assertions")).shouldBe(visible).click();
 
         //проверить текст
         $(byText("Using JUnit5 extend test class:")).shouldBe(visible);
 
     }
-    }
+}
