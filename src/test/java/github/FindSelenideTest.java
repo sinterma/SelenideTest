@@ -12,9 +12,6 @@ public class FindSelenideTest {
     @Test
     void shouldFindSelenideOnGitHub() {
 
-
-
-
         //открыть страницу gitHub
         open("https://github.com/selenide/selenide");
 
@@ -27,7 +24,6 @@ public class FindSelenideTest {
 
         //проверить текст
         $(byText("Using JUnit5 extend test class:")).shouldBe(visible);
-
 
     }
     }
